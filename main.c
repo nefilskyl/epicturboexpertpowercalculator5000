@@ -1,6 +1,6 @@
 #include <math.h>
 
-
+ 
 //scitani
 double add(double i1, double i2)
 {

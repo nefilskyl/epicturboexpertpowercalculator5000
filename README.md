@@ -1,2 +1,2 @@
-# epicturboexpertpowercalculator5000
+# Epic Turbo Expert Power Calculator 5000
 kalkulačka

@@ -2,7 +2,7 @@
 #include<math.h>
 #include<assert.h>
 #include<stdio.h>
-#include"knihrary.c"
+#include"knihovna.h"
 #include"errors.h"
 int main ()
 {
@@ -183,6 +183,51 @@ double c;
         c=add(-75.874,3189725476);
         assert(c == 3189725400.126);
 
+    // specialities
+        c=0;
+        c=add(-INFINITY,2);
+        assert(c == -INFINITY);
+
+        c=0;
+        c=add(NAN,4);
+        assert(c == NAN);
+
+        c=0;
+        c=add(INFINITY,14);
+        assert(c == INFINITY);
+
+        c=0;
+        c=add(4,INFINITY);
+        assert(c == INFINITY);
+
+        c=0;
+        c=add(-653.4,-INFINITY);
+        assert(c == -INFINITY); // nebo zas nejaky undef
+
+        c=0;
+        c=add(-23.87,NAN);
+        assert(c == NAN);
+
+        c=0;
+        c=add(NAN,NAN);
+        assert(c == NAN);
+
+        c=0;
+        c=add(-INFINITY,NAN);
+        assert(c == NAN);
+
+        c=0;
+        c=add(NAN,INFINITY);
+        assert(c == NAN);
+
+        c=0;
+        c=add(-INFINITY,INFINITY);
+        assert(c == NAN);
+
+        c=0;
+        c=add(INFINITY,-INFINITY);
+        assert(c == NAN);
+
 // substraction
     //zero
         c=111;
@@ -357,6 +402,50 @@ double c;
         c=sub(-75.874,3189725476);
         assert(c == -3189725551.874);
 
+    // specialities
+        c=0;
+        c=sub(-INFINITY,2);
+        assert(c == -INFINITY);
+
+        c=0;
+        c=sub(NAN,4);
+        assert(c == NAN);
+
+        c=0;
+        c=sub(INFINITY,14);
+        assert(c == INFINITY);
+
+        c=0;
+        c=sub(4,INFINITY);
+        assert(c == INFINITY);
+
+        c=0;
+        c=sub(-653.4,-INFINITY);
+        assert(c == -INFINITY); // nebo zas nejaky undef
+
+        c=0;
+        c=sub(-23.87,NAN);
+        assert(c == NAN);
+
+        c=0;
+        c=sub(NAN,NAN);
+        assert(c == NAN);
+
+        c=0;
+        c=sub(-INFINITY,NAN);
+        assert(c == NAN);
+
+        c=0;
+        c=sub(NAN,INFINITY);
+        assert(c == NAN);
+
+        c=0;
+        c=sub(-INFINITY,INFINITY);
+        assert(c == NAN);
+
+        c=0;
+        c=sub(INFINITY,-INFINITY);
+        assert(c == NAN);
 
 // division
 
@@ -522,6 +611,62 @@ double c;
         c=division(3189725476,-75.874);
         assert(c == -42039769.56533);
 
+    // specialities
+        c=42;
+        c=division(0,-INFINITY);
+        assert(c == 0);
+
+        c=42;
+        c=division(0,INFINITY);
+        assert(c == 0);
+        
+        c=0;
+        c=division(0,NAN);
+        assert(c == NAN);
+
+        c=0;
+        c=division(-INFINITY,2);
+        assert(c == -INFINITY);
+
+        c=0;
+        c=division(NAN,4);
+        assert(c == NAN);
+
+        c=0;
+        c=division(INFINITY,14);
+        assert(c == INFINITY);
+
+        c=42;
+        c=division(4,INFINITY);
+        assert(c == 0);
+
+        c=42;
+        c=division(-653.4,-INFINITY);
+        assert(c == 0);
+
+        c=0;
+        c=division(-23.87,NAN);
+        assert(c == NAN);
+
+        c=0;
+        c=division(NAN,NAN);
+        assert(c == NAN);
+
+        c=0;
+        c=division(-INFINITY,NAN);
+        assert(c == NAN);
+
+        c=0;
+        c=division(NAN,INFINITY);
+        assert(c == NAN);
+
+        c=0;
+        c=division(-INFINITY,INFINITY);
+        assert(c == NAN);
+
+        c=0;
+        c=division(INFINITY,-INFINITY);
+        assert(c == NAN);
 
 // multiplication
 
@@ -698,6 +843,64 @@ double c;
         c=mul(-75.874,3189725476);
         assert(c == -242017230766.02399); // here should be limit error i guess
 
+    // specialities
+        
+        c=42;
+        c=mul(-INFINITY,0);
+        assert(c == 0);
+        
+        c=42;
+        c=mul(0,INFINITY);
+        assert(c == 0);
+
+        c=0;
+        c=mul(0,NAN);
+        assert(c == NAN);
+
+        c=0;
+        c=mul(-INFINITY,2);
+        assert(c == -INFINITY);
+
+        c=0;
+        c=mul(NAN,4);
+        assert(c == NAN);
+
+        c=0;
+        c=mul(INFINITY,14);
+        assert(c == INFINITY);
+
+        c=0;
+        c=mul(4,INFINITY);
+        assert(c == INFINITY);
+
+        c=0;
+        c=mul(-653.4,-INFINITY);
+        assert(c == -INFINITY);
+
+        c=0;
+        c=mul(-23.87,NAN);
+        assert(c == NAN);
+
+        c=0;
+        c=mul(NAN,NAN);
+        assert(c == NAN);
+
+        c=0;
+        c=mul(-INFINITY,NAN);
+        assert(c == NAN);
+
+        c=0;
+        c=mul(NAN,INFINITY);
+        assert(c == NAN);
+
+        c=0;
+        c=mul(-INFINITY,INFINITY);
+        assert(c == NAN);
+
+        c=0;
+        c=mul(INFINITY,-INFINITY);
+        assert(c == NAN);    
+
 // factorial
 
         c=0;
@@ -736,6 +939,20 @@ double c;
         c=fact(13);
         assert(c == 6227020800); // here should be limit error i guess
 
+    // specialities
+        
+        c=0;
+        c=fact(-INFINITY);
+        assert(c == NAN);
+        
+        c=0;
+        c=fact(INFINITY);
+        assert(c == NAN);
+
+        c=0;
+        c=fact(NAN);
+        assert(c == NAN);
+
 // logarithm
         c=0;
         c=ln(-1);
@@ -765,13 +982,213 @@ double c;
         c=ln(4000000000);
         assert(c == 22.109560198);
 
+    // specialities
+        
+        c=0;
+        c=ln(-INFINITY);
+        assert(c == NAN);
+        
+        c=0;
+        c=ln(INFINITY);
+        assert(c == INFINITY);
+
+        c=0;
+        c=ln(NAN);
+        assert(c == NAN);
+
+// power
+    // zero base
+        c=0;
+        c=power(0,0);
+        assert(c == NAN);
+
+        c=42;
+        c=power(0,2);
+        assert(c == 0);
+
+        c=0;
+        c=power(0,4.45);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(0,-3);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(0,-10.6);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+    
+    // one
+        c=42;
+        c=power(1,0);
+        assert(c == 1);
+
+        c=0;
+        c=power(1,1);
+        assert(c == 1);
+
+        c=0;
+        c=power(1,253);
+        assert(c == 1);
+
+        c=0;
+        c=power(1,54.7163);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(1,-652);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(1,-8565.423);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(1,189725476);
+        assert(c == 1);
+
+    // natural number
+        c=42;
+        c=power(12,0);
+        assert(c == 1);
+
+        c=0;
+        c=power(12,1);
+        assert(c == 12);
+
+        c=0;
+        c=power(12,3);
+        assert(c == 1728);
+
+        c=0;
+        c=power(12,5421.7163);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(12,-652);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(12,-8565.423);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(12,476);
+        assert(c == NAN); // here should be limit error i guess, nevim jak s tou navratovou hodnotou, toto je moc
+
+    // positive with decimal point
+        c=42;
+        c=power(14.714,0);
+        assert(c == 1);
+
+        c=0;
+        c=power(14.714,1);
+        assert(c == 14.714);
+
+        c=0;
+        c=power(14.714,5);
+        assert(c == 689689.729154413713824);
+
+        c=0;
+        c=power(14.714,5421.7163);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(14.714,-652);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(14.714,-8565.423);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(14.714,476);
+        assert(c == NAN); // here should be limit error i guess
+
+    // negative int
+        c=42;
+        c=power(-1243,0);
+        assert(c == 1);
+
+        c=0;
+        c=power(-1243,1);
+        assert(c == -1243);
+
+        c=0;
+        c=power(-1243,3);
+        assert(c == -1920495907);
+
+        c=0;
+        c=power(-1243,5421.7163);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(-1243,-652);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(-1243,-8565.423);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(-1243,189725476);
+        assert(c == NAN); // here should be limit error i guess
+
+    // negative with decimal point
+        c=42;
+        c=power(-75.874,0);
+        assert(c == 1);
+
+        c=0;
+        c=power(-75.874,1);
+        assert(c == -75.874);
+
+        c=0;
+        c=power(-75.874,3);
+        assert(c == -33141481.68679);
+
+        c=0;
+        c=power(-75.874,5421.7163);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(-75.874,-652);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(-75.874,-8565.423);
+        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+
+        c=0;
+        c=power(-75.874,189725476);
+        assert(c == NAN); // here should be limit error i guess
+
+    // specialities
+        c=0;
+        c=power(-INFINITY,2);
+        assert(c == -INFINITY);
+
+        c=0;
+        c=power(NAN,4);
+        assert(c == NAN);
+
+        c=0;
+        c=power(INFINITY,14);
+        assert(c == INFINITY);
+
+/*        c=0;
+        c=power(4,INFINITY);
+        assert(c == NAN); // podle mne infinity neni natural number
+
+        c=0;
+        c=power(4,-INFINITY);
+        assert(c == NAN); // nebo zas nejaky undef
+
+        c=0;
+        c=power(-23.87,NAN);
+        assert(c == NAN); */
+
 printf("Uspech!\n");
 return 0;
 }
-
-
-
-
-
-
 

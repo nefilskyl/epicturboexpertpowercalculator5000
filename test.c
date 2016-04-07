@@ -2,7 +2,7 @@
 #include<math.h>
 #include<assert.h>
 #include<stdio.h>
-#include"knihovna.h"
+#include"knihrary.c"
 #include"errors.h"
 int main ()
 {

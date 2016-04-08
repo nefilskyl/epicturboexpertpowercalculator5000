@@ -20,7 +20,7 @@ double mul(double i1, double i2)
 }
 
 //deleni
-double div(double i1, double i2)
+double division(double i1, double i2)
 {
     return i1 / i2;
 }
@@ -56,7 +56,7 @@ double power (double i1, int i2)
 }
 
 //logaritmus
-double logar (double x)  //funkce pro vypocet prirozeneho logaritmu pomoci zretezeneho zlomku
+double ln (double x)  //funkce pro vypocet prirozeneho logaritmu pomoci zretezeneho zlomku
 {
     double cf = 1.0;
     double a, b;

@@ -1,9 +1,9 @@
-#include<stdlib.h>
-#include<math.h>
-#include<assert.h>
-#include<stdio.h>
-#include"knihovna.h"
-#include"errors.h"
+#include <stdlib.h>
+#include <math.h>
+#include <assert.h>
+#include <stdio.h>
+#include "knihrary.h"
+#include "errors.h"
 int main ()
 {
 double c;

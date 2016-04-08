@@ -939,8 +939,8 @@ double c;
         c=fact(13);
         assert(c == 6227020800); // here should be limit error i guess
 
-    // specialities
-        
+    // specialities - soubor s nimy nelze spustit - integer nedovoluje INFINITY nebo NAN
+        /*
         c=0;
         c=fact(-INFINITY);
         assert(c == NAN);
@@ -952,7 +952,7 @@ double c;
         c=0;
         c=fact(NAN);
         assert(c == NAN);
-
+        */
 // logarithm
         c=0;
         c=ln(-1);

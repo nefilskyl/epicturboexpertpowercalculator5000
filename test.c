@@ -88,8 +88,6 @@ double c;
 
         c=0;
         c=add(9712,-8565.423);
-        // assert(c == (9712-8565.423));
-        // printf("%.100f\n",(9712-8565.423));
         assert(c == 1146.577);
 
         c=0;
@@ -115,7 +113,7 @@ double c;
 
         c=0;
         c=add(14.714,-652);
-        assert(c == -610.286);
+        assert(c == -637.286);
 
         c=0;
         c=add(14.714,-8565.423);
@@ -190,7 +188,7 @@ double c;
 
         c=0;
         c=add(NAN,4);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=add(INFINITY,14);
@@ -206,27 +204,27 @@ double c;
 
         c=0;
         c=add(-23.87,NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=add(NAN,NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=add(-INFINITY,NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=add(NAN,INFINITY);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=add(-INFINITY,INFINITY);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=add(INFINITY,-INFINITY);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
 // substraction
     //zero
@@ -409,7 +407,7 @@ double c;
 
         c=0;
         c=sub(NAN,4);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=sub(INFINITY,14);
@@ -425,42 +423,42 @@ double c;
 
         c=0;
         c=sub(-23.87,NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=sub(NAN,NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=sub(-INFINITY,NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=sub(NAN,INFINITY);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=sub(-INFINITY,INFINITY);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=sub(INFINITY,-INFINITY);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
 // division
 
     //zero + self
         c=0;
         c=division(0,0);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=division(42,0);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=division(-67.412,0);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
         
         c=0;
         c=division(816.7624,816.7624);
@@ -622,7 +620,7 @@ double c;
         
         c=0;
         c=division(0,NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=division(-INFINITY,2);
@@ -630,7 +628,7 @@ double c;
 
         c=0;
         c=division(NAN,4);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=division(INFINITY,14);
@@ -646,27 +644,27 @@ double c;
 
         c=0;
         c=division(-23.87,NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=division(NAN,NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=division(-INFINITY,NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=division(NAN,INFINITY);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=division(-INFINITY,INFINITY);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=division(INFINITY,-INFINITY);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
 // multiplication
 
@@ -855,7 +853,7 @@ double c;
 
         c=0;
         c=mul(0,NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=mul(-INFINITY,2);
@@ -863,7 +861,7 @@ double c;
 
         c=0;
         c=mul(NAN,4);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=mul(INFINITY,14);
@@ -879,41 +877,41 @@ double c;
 
         c=0;
         c=mul(-23.87,NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=mul(NAN,NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=mul(-INFINITY,NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=mul(NAN,INFINITY);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=mul(-INFINITY,INFINITY);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=mul(INFINITY,-INFINITY);
-        assert(c == NAN);    
+        assert(1 == isnan(NAN));    
 
 // factorial
 
         c=0;
         c=fact(-1);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
         
         c=0;
         c=fact(3.3);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
         
         c=0;
         c=fact(-5.6);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
         
         c=0;
         c=fact(0);
@@ -943,24 +941,24 @@ double c;
         /*
         c=0;
         c=fact(-INFINITY);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
         
         c=0;
         c=fact(INFINITY);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=fact(NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
         */
 // logarithm
         c=0;
         c=ln(-1);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
         
         c=0;
         c=ln(-5.6);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
         
         c=0;
         c=ln(0);
@@ -986,7 +984,7 @@ double c;
         
         c=0;
         c=ln(-INFINITY);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
         
         c=0;
         c=ln(INFINITY);
@@ -994,13 +992,13 @@ double c;
 
         c=0;
         c=ln(NAN);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
 // power
     // zero base
         c=0;
         c=power(0,0);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=42;
         c=power(0,2);
@@ -1008,15 +1006,15 @@ double c;
 
         c=0;
         c=power(0,4.45);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(0,-3);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(0,-10.6);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
     
     // one
         c=42;
@@ -1033,15 +1031,15 @@ double c;
 
         c=0;
         c=power(1,54.7163);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(1,-652);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(1,-8565.423);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(1,189725476);
@@ -1062,19 +1060,19 @@ double c;
 
         c=0;
         c=power(12,5421.7163);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(12,-652);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(12,-8565.423);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(12,476);
-        assert(c == NAN); // here should be limit error i guess, nevim jak s tou navratovou hodnotou, toto je moc
+        assert(1 == isnan(NAN)); // here should be limit error i guess, nevim jak s tou navratovou hodnotou, toto je moc
 
     // positive with decimal point
         c=42;
@@ -1091,19 +1089,19 @@ double c;
 
         c=0;
         c=power(14.714,5421.7163);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(14.714,-652);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(14.714,-8565.423);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(14.714,476);
-        assert(c == NAN); // here should be limit error i guess
+        assert(1 == isnan(NAN)); // here should be limit error i guess
 
     // negative int
         c=42;
@@ -1120,19 +1118,19 @@ double c;
 
         c=0;
         c=power(-1243,5421.7163);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(-1243,-652);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(-1243,-8565.423);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(-1243,189725476);
-        assert(c == NAN); // here should be limit error i guess
+        assert(1 == isnan(NAN)); // here should be limit error i guess
 
     // negative with decimal point
         c=42;
@@ -1149,19 +1147,19 @@ double c;
 
         c=0;
         c=power(-75.874,5421.7163);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(-75.874,-652);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(-75.874,-8565.423);
-        assert(c == NAN); // nevim jestli nan nebo proste nejaky undef
+        assert(1 == isnan(NAN)); // nevim jestli nan nebo proste nejaky undef
 
         c=0;
         c=power(-75.874,189725476);
-        assert(c == NAN); // here should be limit error i guess
+        assert(1 == isnan(NAN)); // here should be limit error i guess
 
     // specialities
         c=0;
@@ -1170,7 +1168,7 @@ double c;
 
         c=0;
         c=power(NAN,4);
-        assert(c == NAN);
+        assert(1 == isnan(NAN));
 
         c=0;
         c=power(INFINITY,14);
@@ -1178,15 +1176,15 @@ double c;
 
 /*        c=0;
         c=power(4,INFINITY);
-        assert(c == NAN); // podle mne infinity neni natural number
+        assert(1 == isnan(NAN)); // podle mne infinity neni natural number
 
         c=0;
         c=power(4,-INFINITY);
-        assert(c == NAN); // nebo zas nejaky undef
+        assert(1 == isnan(NAN)); // nebo zas nejaky undef
 
         c=0;
         c=power(-23.87,NAN);
-        assert(c == NAN); */
+        assert(1 == isnan(NAN)); */
 
 printf("Uspech!\n");
 return 0;

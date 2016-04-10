@@ -1,10 +1,52 @@
 #include <math.h>
 
- 
+/*
+//pomocna funkce pro vypocitani zadanach cislic po desetinne carce
+int dadp(char *str)
+{
+  int index = 0,rightLen = 0;
+  const char s[2] = ".";
+  char *token;
+  token = strtok(str, s);
+
+   while( token != NULL ) 
+   {
+      if (index==1)
+      {
+        rightLen = strlen(token);
+      }
+    token = strtok(NULL, s);
+    index++;
+   }
+   return rightLen;
+}
+*/
+
 //scitani
 double add(double i1, double i2)
 {
-    return i1 + i2;
+    
+    /*
+    char array1[20];
+    sprintf(array1,"%lf", i1);
+    char array2[20];
+    sprintf(array2,"%lf", i2);
+    printf("String: %s and %s\n", array1, array2);
+    int one = dadp(array1);
+    int two = dadp(array2);
+    printf("DADP: %d and %d \n", one, two);
+    */
+
+    if (i1 == NAN || i2 == NAN)
+    {
+        return NAN;
+    }
+
+    i1 = i1 * 10000;
+    i2 = i2 * 10000;
+    double vys = i1 + i2;
+    vys= vys / 10000;
+    return vys;
 }
 
 //odcitani

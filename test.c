@@ -270,7 +270,7 @@ double c;
 
         c=0;
         c=sub(1,5421.7163);
-        assert(c == -5421.7163);
+        assert(c == -5420.7163);
 
         c=0;
         c=sub(1,-652);
@@ -415,11 +415,11 @@ double c;
 
         c=0;
         c=sub(4,INFINITY);
-        assert(c == INFINITY);
+        assert(c == -INFINITY);
 
         c=0;
         c=sub(-653.4,-INFINITY);
-        assert(c == -INFINITY); // nebo zas nejaky undef
+        assert(c == INFINITY); // nebo zas nejaky undef
 
         c=0;
         c=sub(-23.87,NAN);
@@ -439,11 +439,11 @@ double c;
 
         c=0;
         c=sub(-INFINITY,INFINITY);
-        assert(1 == isnan(c));
+        assert(c == -INFINITY);
 
         c=0;
         c=sub(INFINITY,-INFINITY);
-        assert(1 == isnan(c));
+        assert(c == INFINITY);
 
 // division
 

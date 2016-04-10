@@ -25,7 +25,7 @@ int dadp(char *str)
 //scitani
 double add(double i1, double i2)
 {
-    
+
     /*
     char array1[20];
     sprintf(array1,"%lf", i1);
@@ -52,7 +52,16 @@ double add(double i1, double i2)
 //odcitani
 double sub(double i1, double i2)
 {
-    return i1 - i2;
+    if (i1 == NAN || i2 == NAN)
+    {
+        return NAN;
+    }
+
+    i1 = i1 * 10000;
+    i2 = i2 * 10000;
+    double vys = i1 - i2;
+    vys= vys / 10000;
+    return vys;
 }
 
 //nasobeni
@@ -64,6 +73,8 @@ double mul(double i1, double i2)
 //deleni
 double division(double i1, double i2)
 {
+    if (i2 == 0)
+        return NAN;
     return i1 / i2;
 }
 

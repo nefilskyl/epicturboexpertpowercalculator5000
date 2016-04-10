@@ -1,42 +1,8 @@
 #include <math.h>
 
-/*
-//pomocna funkce pro vypocitani zadanach cislic po desetinne carce
-int dadp(char *str)
-{
-  int index = 0,rightLen = 0;
-  const char s[2] = ".";
-  char *token;
-  token = strtok(str, s);
-
-   while( token != NULL ) 
-   {
-      if (index==1)
-      {
-        rightLen = strlen(token);
-      }
-    token = strtok(NULL, s);
-    index++;
-   }
-   return rightLen;
-}
-*/
-
 //scitani
 double add(double i1, double i2)
 {
-
-    /*
-    char array1[20];
-    sprintf(array1,"%lf", i1);
-    char array2[20];
-    sprintf(array2,"%lf", i2);
-    printf("String: %s and %s\n", array1, array2);
-    int one = dadp(array1);
-    int two = dadp(array2);
-    printf("DADP: %d and %d \n", one, two);
-    */
-
     if (i1 == NAN || i2 == NAN)
     {
         return NAN;
@@ -75,7 +41,17 @@ double division(double i1, double i2)
 {
     if (i2 == 0)
         return NAN;
-    return i1 / i2;
+
+    if (i1 == i2)
+        return 1;
+
+    if (i1 == 0)
+        return 0;
+
+    if (i2 == 1)
+        return i1;
+
+    return i1/i2;
 }
 
 //faktorial

@@ -55,10 +55,21 @@ double division(double i1, double i2)
 }
 
 //faktorial
-unsigned fact(int i1)
+//faktorial
+double fact(double i1)
 {
-  int c, fact = 1;
+  double c, fact = 1;
 
+  if (i1 < 0)
+  {
+    return NAN;
+  }
+
+  if (i1-(int)i1 != 0)
+  {
+    return NAN;
+  }
+  
   for (c = 1; c <= i1; c++)
     fact = fact * c;
 

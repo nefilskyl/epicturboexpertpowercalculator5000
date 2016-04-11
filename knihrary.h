@@ -33,10 +33,8 @@ double sub(double i1, double i2)
 //nasobeni
 double mul(double i1, double i2)
 {
-    if (i1 == NAN || i2 == NAN)
-    {
+    if ((i1 == NAN) || (i2 == NAN))
         return NAN;
-    }
 
     if (i2 == 0)
         return 0;
@@ -50,17 +48,14 @@ double mul(double i1, double i2)
     if (i1 == 1)
         return i2;
 
-    double vys = i1 * i2;
-    return vys;
+    return i1*i2;
 }
 
 //deleni
 double division(double i1, double i2)
 {
-    if (i1 == NAN || i2 == NAN)
-    {
+    if ((i1 == NAN) || (i2 == NAN))
         return NAN;
-    }
 
     if (i2 == 0)
         return NAN;
@@ -81,6 +76,11 @@ double division(double i1, double i2)
 double fact(double i1)
 {
   double c, fact = 1;
+
+  if (i1 == NAN)
+  {
+    return NAN;
+  }  
 
   if (i1 < 0)
   {
@@ -111,6 +111,12 @@ double fact(double i1)
 //mocnina s prirozenym exponentem
 double power (double i1, double i2)
 {
+
+    if (i1 == NAN || i2 == NAN)
+    {
+        return NAN;
+    }
+
     if (i2 == 0)
     {
         if (i1 == 0)
@@ -155,8 +161,7 @@ double ln (double x)  //funkce pro vypocet prirozeneho logaritmu pomoci zretezen
 {
     double cf = 1.0;
     double a, b;
-    unsigned int n = 10000;
-
+    unsigned int n = 1000000;
 
     if (x < 0)  //osetreni zaporneho cisla
     {

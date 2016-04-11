@@ -601,7 +601,7 @@ double c;
         c=division(-652,-75.874);
         assert(c >= 8.593193 && c < 8.593194);
 
-        c=0;4
+        c=0;
         c=division(-8565.423,-75.874);
         assert(c >= 112.890094 && c < 112.890095);
 
@@ -798,7 +798,7 @@ double c;
 
         c=0;
         c=mul(-1243,5421.7163);
-        assert(c >= -6739193.3609 c < -6739193.36091);
+        assert(c >= -6739193.3609 && c < -6739193.36091);
 
         c=0;
         c=mul(-1243,-652);
@@ -839,7 +839,7 @@ double c;
 
         c=0;
         c=mul(-75.874,3189725476);
-        assert(c >= -242017230766.024 c < -242017230766.0241); // here should be limit error i guess
+        assert(c >= -242017230766.024 && c < -242017230766.0241); // here should be limit error i guess
 
     // specialities
         

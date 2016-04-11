@@ -500,27 +500,27 @@ double c;
 
         c=0;
         c=division(1,912);
-        assert(c == 0.0011);
+        assert(c >= 0.001096 && c < 0.001097);
 
         c=0;
         c=division(871253,912);
-        assert(c == 955.32127);
+        assert(c >= 955.321271 && c < 955.321272);
 
         c=0;
         c=division(5421.7163,912);
-        assert(c == 5.94486);
+        assert(c >= 5.944864 && c < 5.944865);
 
         c=0;
         c=division(-652,912);
-        assert(c == -0.71491);
+        assert(c >= -0.714912 && c < -0.714913);
 
         c=0;
         c=division(-8565.423,912);
-        assert(c == -9.39191);
+        assert(c >= -9.391911 && c < -9.391912);
 
         c=0;
         c=division(3189725476,912);
-        assert(c == 3497506.00439);
+        assert(c >= 3497506.004385 && c < 3497506.004386);
 
     // positive with decimal point
         c=42;
@@ -529,27 +529,27 @@ double c;
 
         c=0;
         c=division(1,14.714);
-        assert(c == 0.06796);
+        assert(c >= 0.067962 && c < 0.067963);
 
         c=0;
         c=division(871253,14.714);
-        assert(c == 59212.51869);
+        assert(c >= 59212.518689 && c < 59212.51869);
 
         c=0;
         c=division(5421.7163,14.714);
-        assert(c == 368.47331);
+        assert(c >= 368.473311 && c < 368.473312);
 
         c=0;
         c=division(-652,14.714);
-        assert(c == -44.31154);
+        assert(c >= -44.31154 && c < -44.311541);
 
         c=0;
         c=division(-8565.423,14.714);
-        assert(c == -582.12743);
+        assert(c >= -582.127429 && c < -582.12743);
 
         c=0;
         c=division(3189725476,14.714);
-        assert(c == 216781668.88677);
+        assert(c >= 216781668.886774 && c < 216781668.886775);
 
     // negative int
         c=42;
@@ -558,27 +558,27 @@ double c;
 
         c=0;
         c=division(1,-1243);
-        assert(c == -0.0008);
+        assert(c >= -0.000804 && c < -0.000805); // mozna chyba
 
         c=0;
         c=division(871253,-1243);
-        assert(c == -700.92759);
+        assert(c >= -700.927594 && c < -700.927595);
 
         c=0;
         c=division(5421.7163,-1243);
-        assert(c == -4.3618);
+        assert(c >= -4.361799 && c < -4.3618);
 
         c=0;
         c=division(-652,-1243);
-        assert(c == 0.52454);
+        assert(c >= 0.524537 && c < 0.524538);
 
         c=0;
         c=division(-8565.423,-1243);
-        assert(c == 6.89093);
+        assert(c >= 6.890927 && c < 6.890928);
 
         c=0;
         c=division(3189725476,-1243);
-        assert(c == -2566150.82542);
+        assert(c >= -2566150.825422 && c < -2566150.825423);
 
     // negative with decimal point
         c=42;
@@ -587,27 +587,27 @@ double c;
 
         c=0;
         c=division(1,-75.874);
-        assert(c == -0.01318);
+        assert(c >= -0.013179 && c < -0.01318);
 
         c=0;
         c=division(871253,-75.874);
-        assert(c == -11482.89269);
+        assert(c >= -11482.89269 && c < -11482.892691);
 
         c=0;
         c=division(5421.7163,-75.874);
-        assert(c == -71.45684);
+        assert(c >= -71.45684 && c < -71.456841);
 
         c=0;
         c=division(-652,-75.874);
-        assert(c == 8.59319);
+        assert(c >= 8.593193 && c < 8.593194);
 
-        c=0;
+        c=0;4
         c=division(-8565.423,-75.874);
-        assert(c == 112.89009);
+        assert(c >= 112.890094 && c < 112.890095);
 
         c=0;
         c=division(3189725476,-75.874);
-        assert(c == -42039769.56533);
+        assert(c >= -42039769.565331 && c < -42039769.565332);
 
     // specialities
         c=42;

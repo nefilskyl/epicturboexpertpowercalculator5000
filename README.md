@@ -47,9 +47,9 @@ Klavesove zkratky:
   - [space] = Ans
 
   - Alt + F = file
-    -> Q = Quit
-    -> A = About
-    -> H = Help
+    - -> Q = Quit
+    - -> A = About
+    - -> H = Help
 
 
 

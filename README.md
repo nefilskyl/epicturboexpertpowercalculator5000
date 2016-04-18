@@ -5,16 +5,20 @@ kalkulačka
 
 Ad GUI 
 - v Qt designeru se nadesignuje kalkulačka, tlačítka a takové blbosti 
+
 - to vyplivne XML soubor (main.ui) 
-- to se musí přeložit do hlavičkového souboru příkazem  
-uic -o ui_main.h main.ui // program_-output_jméno výstupního souboru_jméno vstupního souboru 
+
+- to se musí přeložit do hlavičkového souboru   
 Máme hlavičkový soubor ui_main.h - hurá! 
-Ten obsahuje hlavně popis třídy Ui_MainWindow (to je vlastně grafické rozhraní samo), ve které je spousta ukazatelů na objekty, hlavně tlačítka, line edit (ten displej) a action... všechno je vlastně podmnožina widget (tlačítko, line edit, layout [rozvržení-tohle tlačítko je tady, tohle tam a je to uspořádané v nějaké tabulce], akce-nabídka[quit,about]...) a taky dvě metody (setupUi, retranslateUi [ty nemusíme řešit]) 
+
+Ten obsahuje hlavně popis třídy Ui_MainWindow (to je vlastně grafické rozhraní samo), ve které je spousta ukazatelů na objekty, hlavně tlačítka, line edit (ten displej) a action... všechno je vlastně podmnožina widget (tlačítko, line edit, layout [rozvržení-tohle tlačítko je tady, tohle tam a je to uspořádané v nějaké tabulce], action-nabídka[quit,about]...) a taky dvě metody (setupUi, retranslateUi [ty nemusíme řešit]) 
 Třeba QStatusBar stavový řádek si nemusíme vůbec všímat, nepoužíváme ho, jen se prostě generuje automaticky... ani QMenuBar a QMenu netřeba řešit 
-Jinak viz dokumentace (např. pro objekt QPushButton http://doc.qt.io/qt-4.8/qpushbutton.html) 
+Jinak viz dokumentace (např. pro objekt QPushButton http://doc.qt.io/qt-4.8/qpushbutton.html) (a Pavlovy přehledné poznámky  níže) 
+
 - Pavel vyplivl main.cpp (popsán hojně sám)... do něj se naincluduje ui_main.h (a další věci samozřejmě) 
+
 - veškeré změny budou v main.cpp - samotná kalkulačka 
-- 
+ 
 
 
 _____

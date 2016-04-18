@@ -30,7 +30,7 @@ class Ui_MainWindow
 {
 public:
     QAction *actionQuit;
-    QAction *action_README;
+    QAction *action_Help;
     QAction *action_About;
     QWidget *centralwidget;
     QLineEdit *lineEdit;
@@ -55,11 +55,11 @@ public:
     QPushButton *Button_plusminus;
     QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton;
+    QPushButton *Button_C;
+    QPushButton *Button_fact;
+    QPushButton *Button_ln;
     QPushButton *Button_power;
-    QPushButton *pushButton_3;
+    QPushButton *Button_Ans;
     QMenuBar *menubar;
     QMenu *menuFile;
     QStatusBar *statusbar;
@@ -92,8 +92,8 @@ public:
         actionQuit = new QAction(MainWindow);
         actionQuit->setObjectName(QString::fromUtf8("actionQuit"));
         actionQuit->setMenuRole(QAction::QuitRole);
-        action_README = new QAction(MainWindow);
-        action_README->setObjectName(QString::fromUtf8("action_README"));
+        action_Help = new QAction(MainWindow);
+        action_Help->setObjectName(QString::fromUtf8("action_Help"));
         action_About = new QAction(MainWindow);
         action_About->setObjectName(QString::fromUtf8("action_About"));
         centralwidget = new QWidget(MainWindow);
@@ -125,7 +125,7 @@ public:
         lineEdit->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lineEdit->setDragEnabled(false);
         lineEdit->setReadOnly(true);
-        lineEdit->setPlaceholderText(QString::fromUtf8("42"));
+        lineEdit->setPlaceholderText(QString::fromUtf8(""));
         layoutWidget = new QWidget(centralwidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(10, 70, 161, 181));
@@ -304,26 +304,26 @@ public:
         verticalLayout = new QVBoxLayout(layoutWidget1);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton_4 = new QPushButton(layoutWidget1);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setMinimumSize(QSize(30, 30));
-        pushButton_4->setMaximumSize(QSize(30, 30));
+        Button_C = new QPushButton(layoutWidget1);
+        Button_C->setObjectName(QString::fromUtf8("Button_C"));
+        Button_C->setMinimumSize(QSize(30, 30));
+        Button_C->setMaximumSize(QSize(30, 30));
 
-        verticalLayout->addWidget(pushButton_4);
+        verticalLayout->addWidget(Button_C);
 
-        pushButton_2 = new QPushButton(layoutWidget1);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setMinimumSize(QSize(30, 30));
-        pushButton_2->setMaximumSize(QSize(30, 30));
+        Button_fact = new QPushButton(layoutWidget1);
+        Button_fact->setObjectName(QString::fromUtf8("Button_fact"));
+        Button_fact->setMinimumSize(QSize(30, 30));
+        Button_fact->setMaximumSize(QSize(30, 30));
 
-        verticalLayout->addWidget(pushButton_2);
+        verticalLayout->addWidget(Button_fact);
 
-        pushButton = new QPushButton(layoutWidget1);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setMinimumSize(QSize(30, 30));
-        pushButton->setMaximumSize(QSize(30, 30));
+        Button_ln = new QPushButton(layoutWidget1);
+        Button_ln->setObjectName(QString::fromUtf8("Button_ln"));
+        Button_ln->setMinimumSize(QSize(30, 30));
+        Button_ln->setMaximumSize(QSize(30, 30));
 
-        verticalLayout->addWidget(pushButton);
+        verticalLayout->addWidget(Button_ln);
 
         Button_power = new QPushButton(layoutWidget1);
         Button_power->setObjectName(QString::fromUtf8("Button_power"));
@@ -339,12 +339,12 @@ public:
 
         verticalLayout->addWidget(Button_power);
 
-        pushButton_3 = new QPushButton(layoutWidget1);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setMinimumSize(QSize(30, 30));
-        pushButton_3->setMaximumSize(QSize(30, 30));
+        Button_Ans = new QPushButton(layoutWidget1);
+        Button_Ans->setObjectName(QString::fromUtf8("Button_Ans"));
+        Button_Ans->setMinimumSize(QSize(30, 30));
+        Button_Ans->setMaximumSize(QSize(30, 30));
 
-        verticalLayout->addWidget(pushButton_3);
+        verticalLayout->addWidget(Button_Ans);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -358,7 +358,7 @@ public:
         MainWindow->setStatusBar(statusbar);
 
         menubar->addAction(menuFile->menuAction());
-        menuFile->addAction(action_README);
+        menuFile->addAction(action_Help);
         menuFile->addAction(action_About);
         menuFile->addSeparator();
         menuFile->addAction(actionQuit);
@@ -377,7 +377,7 @@ public:
 #endif // QT_NO_WHATSTHIS
         actionQuit->setText(QApplication::translate("MainWindow", "&Quit", 0, QApplication::UnicodeUTF8));
         actionQuit->setShortcut(QApplication::translate("MainWindow", "Q", 0, QApplication::UnicodeUTF8));
-        action_README->setText(QApplication::translate("MainWindow", "&Help", 0, QApplication::UnicodeUTF8));
+        action_Help->setText(QApplication::translate("MainWindow", "&Help", 0, QApplication::UnicodeUTF8));
         action_About->setText(QApplication::translate("MainWindow", "&About", 0, QApplication::UnicodeUTF8));
         Button_mul->setText(QApplication::translate("MainWindow", "\303\227", 0, QApplication::UnicodeUTF8));
         Button_mul->setShortcut(QApplication::translate("MainWindow", "*", 0, QApplication::UnicodeUTF8));
@@ -412,13 +412,13 @@ public:
         Button_DPoint->setText(QApplication::translate("MainWindow", ",", 0, QApplication::UnicodeUTF8));
         Button_DPoint->setShortcut(QApplication::translate("MainWindow", ",", 0, QApplication::UnicodeUTF8));
         Button_plusminus->setText(QApplication::translate("MainWindow", "+/-", 0, QApplication::UnicodeUTF8));
-        pushButton_4->setText(QApplication::translate("MainWindow", "C", 0, QApplication::UnicodeUTF8));
-        pushButton_4->setShortcut(QApplication::translate("MainWindow", "Backspace", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("MainWindow", "n!", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setShortcut(QApplication::translate("MainWindow", "!", 0, QApplication::UnicodeUTF8));
-        pushButton->setText(QApplication::translate("MainWindow", "ln", 0, QApplication::UnicodeUTF8));
-        pushButton_3->setText(QApplication::translate("MainWindow", "Ans", 0, QApplication::UnicodeUTF8));
-        pushButton_3->setShortcut(QApplication::translate("MainWindow", "Space", 0, QApplication::UnicodeUTF8));
+        Button_C->setText(QApplication::translate("MainWindow", "C", 0, QApplication::UnicodeUTF8));
+        Button_C->setShortcut(QApplication::translate("MainWindow", "Del", 0, QApplication::UnicodeUTF8));
+        Button_fact->setText(QApplication::translate("MainWindow", "n!", 0, QApplication::UnicodeUTF8));
+        Button_fact->setShortcut(QApplication::translate("MainWindow", "!", 0, QApplication::UnicodeUTF8));
+        Button_ln->setText(QApplication::translate("MainWindow", "ln", 0, QApplication::UnicodeUTF8));
+        Button_Ans->setText(QApplication::translate("MainWindow", "Ans", 0, QApplication::UnicodeUTF8));
+        Button_Ans->setShortcut(QApplication::translate("MainWindow", "Space", 0, QApplication::UnicodeUTF8));
         menuFile->setTitle(QApplication::translate("MainWindow", "&File", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

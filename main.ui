@@ -144,7 +144,7 @@
      <bool>true</bool>
     </property>
     <property name="placeholderText">
-     <string notr="true">42</string>
+     <string notr="true"/>
     </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
@@ -655,7 +655,7 @@
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="Button_C">
        <property name="minimumSize">
         <size>
          <width>30</width>
@@ -672,12 +672,12 @@
         <string>C</string>
        </property>
        <property name="shortcut">
-        <string>Backspace</string>
+        <string>Del</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="Button_fact">
        <property name="minimumSize">
         <size>
          <width>30</width>
@@ -699,7 +699,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="Button_ln">
        <property name="minimumSize">
         <size>
          <width>30</width>
@@ -753,7 +753,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="Button_Ans">
        <property name="minimumSize">
         <size>
          <width>30</width>
@@ -790,7 +790,7 @@
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <addaction name="action_README"/>
+    <addaction name="action_Help"/>
     <addaction name="action_About"/>
     <addaction name="separator"/>
     <addaction name="actionQuit"/>
@@ -809,7 +809,7 @@
     <enum>QAction::QuitRole</enum>
    </property>
   </action>
-  <action name="action_README">
+  <action name="action_Help">
    <property name="text">
     <string>&amp;Help</string>
    </property>

@@ -73,7 +73,11 @@ Kompilace ze zdrojáků ("unstable"):
 
 
 :::::::::: Obecné věci :::::::::: 
+
 ..... K objektům: 
+
 tlačítko je widget, displej je widget... 
+
 každý widget má své signály a sloty
+
 signál je to, co widget vysílá... třeba klikneš na tlačítko a tlačítko pošle signál... ten musí být napojen na nějaký slot, který spustí funkci, která ho zpracuje 

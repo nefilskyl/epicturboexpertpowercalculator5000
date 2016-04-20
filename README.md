@@ -68,3 +68,12 @@ Kompilace ze zdrojáků ("unstable"):
   - vygenerovat Makefile "qmake"
   - přeložit "make" (nazev_projektu, main.o)
   - spustit "./nazev_programu" ... nazev_programu = nazev projektu (= nazev slozky ve ktere je to umísteno)
+
+
+
+
+:::::::::: Obecné věci :::::::::: 
+..... K objektům: 
+tlačítko je widget, displej je widget... 
+každý widget má své signály a sloty
+signál je to, co widget vysílá... třeba klikneš na tlačítko a tlačítko pošle signál... ten musí být napojen na nějaký slot, který spustí funkci, která ho zpracuje 

@@ -3,7 +3,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include "knihrary.h"
-#include "errors.h"
+
 int main ()
 {
 double c;

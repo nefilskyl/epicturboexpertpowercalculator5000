@@ -140,7 +140,7 @@ double power (double i1, double i2)
         return NAN;
     }
 
-    if ((i2 > 450) && (i1 == 1))
+    if (i1 == 1)
     {
         return 1;
     }
